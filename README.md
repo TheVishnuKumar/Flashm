@@ -15,7 +15,8 @@ Flashm (Flash Middleware) - Making Almost Server Less Apex Calls
 
 About
 -------------
-Flashm is a Lightning Web Component framework to reduce Apex server calls and enhance the performance of data fetching for Lightning Web Components. The framework stores the promises at the browser's tab and it can be reused without making the almost no server call. 
+Flashm is a Lightning Web Component framework to reduce Apex server calls and enhance the performance of data fetching for Lightning Web Components. The framework stores the promises at the browser's tab and it can be reused without making the almost no server call.
+
 Flashm works great when we need to retrieve the same data in a low network or no network.
 
 Use Case
@@ -29,7 +30,9 @@ In my case, I was having 6-7  Lightning Web Components on the page and 4 LWCs in
 How it Works and Why is Super Fast?
 -------------
 Flashm works as middleware between Lightning Web Component and Apex Calls. It provides the memory to store the blocks and cells. You invoke Flashm then Flashm invokes the Apex call. Flashm is based on Blocks and Cells.
+
 <b>Block:</b> is the address that is same for all the same Apex methods. A block contains multiple cells.
+
 <b>Cell:</b> Cell is the place where the parameters and promises get stored. Cells provide virtual memory. Parameters work as a unique address for every cell in the block.
 
 <div align="center">
@@ -37,35 +40,34 @@ Flashm works as middleware between Lightning Web Component and Apex Calls. It pr
        src="https://raw.githubusercontent.com/TheVishnuKumar/Flashm/master/Flashm%20Process.jpg">
 </div>
 
-As described in the diagram, Because every apex call is first checked in the Flashm memory. If a prmosis is found in the Flashm memory then it returns from the here instead of goinf to the server.
+As described in the diagram, Because every apex call is first checked in the Flashm memory. If a promise is found in the Flashm memory then it returns from the here instead of going to the server.
 
 Features
 -------------
-- Super fast as it uses the Flashm memory to store the promises and return data if needed instead of making server call.
-- You have control to erase cell, block and entire Flashm memory.
-- If Flashm memory contains data and apex call is requested then it can be used without network as well. Ex: Can be used at Kiosks where app have limited searches.
-- Reduce the Server load. Provide more lightning to your lightning app.
+- Superfast as it uses the Flashm memory to store the promises and return data if needed instead of making the server call.
+- You have control to erase the cell, block, and entire Flashm memory.
+- If Flashm memory contains data and apex call is requested then it can be used without network as well. Ex: Can be used at Kiosks where the app has limited searches and no network sometimes.
+- Reduce the Server load. Provide more lighting to your lightning app.
 
 Considerations and Limitation
 -------------
 - Don't use when dealing with large data.
-- Don't use to commit/DML to the server. Must be used to retirve the data from server.
-- Take care while naming the Block address. Dont use same name for two different kind of Apex methods.
-- Shold use flushCell in catch statements. So in case of error, Flashm dont store the error. In next call it tries a server call to retieve success result.
+- Don't use to commit/DML to the server. Must be used to retrieve the data from the server.
+- Take care while naming the Block address. Don't use the same name for two different kinds of Apex methods.
+- Should use flushCell in catch statements. So in case of error, Flashm doesn't store the error. In the next call, it tries a server call to retrieve success result.
 - Should not be used with cacheable methods.
 
 Documentation
 -------------
-**Flashm:** Using is Flashm is very simple as you dont need to get worried when the promises get resolved. Flashm has four methods.
-
+**Flashm:** Using Flashm is very simple as you don't need to get worried when the promises get resolved and syntaxes are very simple. Flashm has four methods.
 
 Methods
 ----------
-1. **invoke**: This method is the entry point to Flashm and call the Apex methods. It has 4 parameters.
-A: Block Address: Dont use same name for two different kind of Apex methods. For exm: Dont use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.
-B: Apex Method: The name of apex method which is imported.
-C: Parameters: (Optional) Pass the paramteter as you want in @AuraEnabled method.
-D: Force Refresh: (Optional) Accept a boolean value. Default is false. If passed true then it always make server call instead of checking from the Flashm memomry.
+1. **invoke**: This method is the entry point to Flashm and calls the Apex methods. It has 4 parameters.<br/>
+A: Block Address: Don't use the same name for two different kinds of Apex methods. Ex: Don't use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.<br/>
+B: Apex Method: The name of the apex method which is imported.<br/>
+C: Parameters: (Optional) Pass the parameters as you want in @AuraEnabled method.<br/>
+D: Force Refresh: (Optional) Accept a boolean value. Default is false. If passed true then it always makes the server call instead of checking from the Flashm memory.<br/>
 
 ```javascript
 //Importing apex method
