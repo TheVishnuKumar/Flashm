@@ -1,7 +1,7 @@
-Flashm (Flash Middleware) - A middleware to enhance Apex server calls from Lightning Web Component to create faster Apps. It can be used to write network less web apps as well.
+Flashm (Flash Middleware) - Making Almost Server Less Apex Calls
 -------------
 
-<!-- <div align="center">
+<div align="center">
   <img alt="Flashm (Flash Middleware)"
        src="https://raw.githubusercontent.com/TheVishnuKumar/one-pub-sub-lwc/master/one%20pub%20sub.png">
 </div>
@@ -11,7 +11,7 @@ Flashm (Flash Middleware) - A middleware to enhance Apex server calls from Light
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
-Blog: <a href="http://www.0to1code.com/one-pubsub-a-pubsub-library-for-lightning-web-component-and-aura-component/">http://www.0to1code.com/one-pubsub-a-pubsub-library-for-lightning-web-component-and-aura-component/</a> -->
+<!-- Blog: <a href="http://www.0to1code.com/one-pubsub-a-pubsub-library-for-lightning-web-component-and-aura-component/">http://www.0to1code.com/one-pubsub-a-pubsub-library-for-lightning-web-component-and-aura-component/</a> --> 
 
 About
 -------------
@@ -30,6 +30,10 @@ Flashm works as middleware between Lightningn Web Component and Apex Calls. It p
 Block: is the address that is same for all the same Apex method. A block contains multiple cells.
 Cell: Cell is place where the parameters and promises get stored. Cells provides the virtual memory. Parameters work as unique address for every cell in the block.
 
+<div align="center">
+  <img alt="Flashm"
+       src="https://raw.githubusercontent.com/TheVishnuKumar/Flashm/master/Flashm%20Process.jpg">
+</div>
 
 As described in the diagram, Because every apex call is first checked in the Flashm memory. If a prmosis is found in the Flashm memory then it returns from the here instead of goinf to the server.
 
