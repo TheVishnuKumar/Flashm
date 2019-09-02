@@ -64,10 +64,10 @@ Documentation
 Methods
 ----------
 1. **invoke**: This method is the entry point to Flashm and calls the Apex methods. It has 4 parameters.<br/>
-<u>A: Block Address:</u> Don't use the same name for two different kinds of Apex methods. Ex: Don't use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.<br/>
-<u>B: Apex Method:</u> The name of the apex method which is imported.<br/>
-<u>C: Parameters:</u> (Optional) Pass the parameters as you want in @AuraEnabled method.<br/>
-<u>D: Force Refresh:</u> (Optional) Accept a boolean value. Default is false. If passed true then it always makes the server call instead of checking from the Flashm memory.<br/>
+<b>A: Block Address:</b> Don't use the same name for two different kinds of Apex methods. Ex: Don't use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.<br/>
+<b>B: Apex Method:</b> The name of the apex method which is imported.<br/>
+<b>C: Parameters:</b> (Optional) Pass the parameters as you want in @AuraEnabled method.<br/>
+<b>D: Force Refresh:</b> (Optional) Accept a boolean value. Default is false. If passed true then it always makes the server call instead of checking from the Flashm memory.<br/>
 
 ```javascript
 //Importing apex method
