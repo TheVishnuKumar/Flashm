@@ -102,7 +102,10 @@ Considerations and Limitation
 - Should use flushCell in catch statements. So in case of error, Flashm doesn't store the error. In the next call, it tries a server call to retrieve success result.
 - Should not be used with cacheable methods.
 
-Code on  <a href="https://gist.github.com/TheVishnuKumar/176504b9a6d41c671d2d348523a006de">gist</a>
+Demo & Code
+-------------
+Demo: <a href="https://gist.github.com/TheVishnuKumar/176504b9a6d41c671d2d348523a006de">Youtube</a><br/>
+Gist: <a href="https://gist.github.com/TheVishnuKumar/176504b9a6d41c671d2d348523a006de">Gist</a>
 
 Release
 -------------

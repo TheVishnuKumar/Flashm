@@ -18,7 +18,11 @@ let blocks = new Map();
 const invoke = (blockAddress , fun, payload = '' , forceRefresh = false) => {
     let cell = blockAddress + ( payload ? JSON.stringify(payload) : '' );
 
-    let _promise = getPromise(blockAddress, cell, payload );
+    let _promise;
+    
+    if( !forceRefresh ){
+        _promise = getPromise(blockAddress, cell, payload );
+    }
 
     if( _promise === undefined || forceRefresh ){
 
