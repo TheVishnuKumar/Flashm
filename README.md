@@ -3,7 +3,7 @@ Flashm (Flash Middleware) - Making Almost Server Less Apex Calls
 
 <div align="center">
   <img alt="Flashm (Flash Middleware)"
-       src="https://raw.githubusercontent.com/TheVishnuKumar/one-pub-sub-lwc/master/one%20pub%20sub.png">
+       src="https://raw.githubusercontent.com/TheVishnuKumar/Flashm/master/flashm%20logo.png">
 </div>
 <br/>
 <a href="https://githubsfdeploy.herokuapp.com?owner=TheVishnuKumar&repo=Flashm">
