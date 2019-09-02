@@ -25,7 +25,7 @@ Assume that we are loading configuration data from sObject/Custom Settings. We w
 All of these are using basic configuration and making server calls for the same data.
 After using Flashm, this data will be loaded for only one time and can be used across all pages.
 
-In my case, I was having 6-7  Lightning Web Components on the page and 4 LWCs in the utility bar with having 6 lightning page tabs. If I don't use Flashm then it would cost me 60 Apex Server Calls and these get increased as the user navigates to the App many times. It can go from 10 to 100 easily. After using Flashm, It is not only and only <b>One</b>.
+In my case, I was having 6-7  Lightning Web Components on the page and 4 LWCs in the utility bar with having 6 lightning page tabs. If I don't use Flashm then it would cost me 60 Apex Server Calls and these get increased as the user navigates to the App many times. It can go from 10 to 100 easily. After using Flashm, It is only and only <b>One</b>.
 
 How it Works and Why is Super Fast?
 -------------
