@@ -57,12 +57,10 @@ Considerations and Limitation
 - Should use flushCell in catch statements. So in case of error, Flashm doesn't store the error. In the next call, it tries a server call to retrieve success result.
 - Should not be used with cacheable methods.
 
-Documentation
--------------
-**Flashm:** Using Flashm is very simple as you don't need to get worried when the promises get resolved and syntaxes are very simple. Flashm has four methods.
-
 Methods
 ----------
+ Using Flashm is very simple as you don't need to get worried when the promises get resolved and syntaxes are very simple. Flashm has four methods.
+
 1. **invoke**: This method is the entry point to Flashm and calls the Apex methods. It has 4 parameters.<br/>
 <b>A: Block Address:</b> Don't use the same name for two different kinds of Apex methods. Ex: Don't use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.<br/>
 <b>B: Apex Method:</b> The name of the apex method which is imported.<br/>
