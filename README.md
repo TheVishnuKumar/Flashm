@@ -104,7 +104,7 @@ flashm.flushBlock( 'getUserFullInformation' );
 flashm.flushAll();
 ```
 
-Code on  <a href="">gist</a>
+Code on  <a href="https://gist.github.com/TheVishnuKumar/176504b9a6d41c671d2d348523a006de">gist</a>
 
 Release
 -------------
