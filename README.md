@@ -15,20 +15,22 @@ Flashm (Flash Middleware) - Making Almost Server Less Apex Calls
 
 About
 -------------
-Flashm is framework to reduce Apex server calls and enhance the performance of data fetching for Lightning Web Component. The framework stores the prmosis at browser's tab and it can be reused without making server call. Flashm is great when we are retriving same kind of data without network.
+Flashm is a Lightning Web Component framework to reduce Apex server calls and enhance the performance of data fetching for Lightning Web Components. The framework stores the promises at the browser's tab and it can be reused without making the almost no server call. 
+Flashm works great when we need to retrieve the same data in a low network or no network.
 
 Use Case
 -------------
-Lets assume that we are loading configuration data from sObject/Custom Settings. We want to use this data on variuos place like utiltyi Bar, Multiple pages thoughrout the app. We are having 5 to 6 lightning web components on the page. These can be in hierarchy, utility bar and individual placed on the page. All of these are using basic configuration and making server calls for same data.
-After using Flashm, this data will be loaded for only one time and can be used across the all pages. 
+Assume that we are loading configuration data from sObject/Custom Settings. We want to use this data on various place like Utility Bar, Multiple pages throughout the app. We are having 5 to 6 Lightning Web Components on the page. These can be in the hierarchy, Utility Bar and individually placed on the page. 
+All of these are using basic configuration and making server calls for the same data.
+After using Flashm, this data will be loaded for only one time and can be used across all pages.
 
-In my case, i was having 6-7 components on the page and 4 component in the utility bar with having 6 lightning page tabs. If i  dont use Flashm then it would cost me 60 Apex Server Calls and these get increasd as user navigate to the app many time. It can go to 10 to 100 easly. Aftter using Flashm, It is not only and only One.
+In my case, I was having 6-7  Lightning Web Components on the page and 4 LWCs in the utility bar with having 6 lightning page tabs. If I don't use Flashm then it would cost me 60 Apex Server Calls and these get increased as the user navigates to the App many times. It can go from 10 to 100 easily. After using Flashm, It is not only and only <b>One</b>.
 
 How it Works and Why is Super Fast?
 -------------
-Flashm works as middleware between Lightningn Web Component and Apex Calls. It provides the memory to store the blocks and cells. You invoke Flashm then Flashm invokes the Apex call. Flashm is based on Blocks and Cells.
-Block: is the address that is same for all the same Apex method. A block contains multiple cells.
-Cell: Cell is place where the parameters and promises get stored. Cells provides the virtual memory. Parameters work as unique address for every cell in the block.
+Flashm works as middleware between Lightning Web Component and Apex Calls. It provides the memory to store the blocks and cells. You invoke Flashm then Flashm invokes the Apex call. Flashm is based on Blocks and Cells.
+<b>Block:</b> is the address that is same for all the same Apex methods. A block contains multiple cells.
+<b>Cell:</b> Cell is the place where the parameters and promises get stored. Cells provide virtual memory. Parameters work as a unique address for every cell in the block.
 
 <div align="center">
   <img alt="Flashm"
