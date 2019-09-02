@@ -64,10 +64,10 @@ Documentation
 Methods
 ----------
 1. **invoke**: This method is the entry point to Flashm and calls the Apex methods. It has 4 parameters.<br/>
-A: Block Address: Don't use the same name for two different kinds of Apex methods. Ex: Don't use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.<br/>
-B: Apex Method: The name of the apex method which is imported.<br/>
-C: Parameters: (Optional) Pass the parameters as you want in @AuraEnabled method.<br/>
-D: Force Refresh: (Optional) Accept a boolean value. Default is false. If passed true then it always makes the server call instead of checking from the Flashm memory.<br/>
+<u>A: Block Address:</u> Don't use the same name for two different kinds of Apex methods. Ex: Don't use getAccount as block address for getAccount() and getContact() apex methods. As it will store promise of first called method and then return this one only.<br/>
+<u>B: Apex Method:</u> The name of the apex method which is imported.<br/>
+<u>C: Parameters:</u> (Optional) Pass the parameters as you want in @AuraEnabled method.<br/>
+<u>D: Force Refresh:</u> (Optional) Accept a boolean value. Default is false. If passed true then it always makes the server call instead of checking from the Flashm memory.<br/>
 
 ```javascript
 //Importing apex method
@@ -85,25 +85,26 @@ catch( (error) =>{
 });
 ```
 
-2. **flushCell**: This methods removes the cell. Now, the next call will go to Server and stores the latest promise into the memory. It has 2 parameters.
-A: Block Address
-B: Paramemter: (Optional)
+2. **flushCell**: This method removes the cell. Now, the next call will go to Server and stores the latest promise into the memory. It has 2 parameters.<br/>
+A: Block Address<br/>
+B: Parameter: (Optional)<br/>
+
 ```javascript
 flashm.flushCell( 'getUserFullInformation' , {name: searchStr} );
 ```
 
-3. **flushBlock**: This methods removes the block and all the cells inside the block. It has one parameter.
-A: Block Address
+3. **flushBlock**: This method removes the block and all the cells inside the block. It takes one parameter as the block address.
+
 ```javascript
 flashm.flushBlock( 'getUserFullInformation' );
 ```
 
-4. **flushAll**: This methods cleans out all the Flashm memory.
+4. **flushAll**: This method cleans out all the Flashm memory.
 ```javascript
 flashm.flushAll();
 ```
 
-Code on  <a href="https://gist.github.com/TheVishnuKumar/2f7fb4c8dba46142e14342391c56661c">gist</a>
+Code on  <a href="">gist</a>
 
 Release
 -------------
