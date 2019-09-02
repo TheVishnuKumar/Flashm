@@ -49,14 +49,6 @@ Features
 - If Flashm memory contains data and apex call is requested then it can be used without network as well. Ex: Can be used at Kiosks where the app has limited searches and no network sometimes.
 - Reduce the Server load. Provide more lighting to your lightning app.
 
-Considerations and Limitation
--------------
-- Don't use when dealing with large data.
-- Don't use to commit/DML to the server. Must be used to retrieve the data from the server.
-- Take care while naming the Block address. Don't use the same name for two different kinds of Apex methods.
-- Should use flushCell in catch statements. So in case of error, Flashm doesn't store the error. In the next call, it tries a server call to retrieve success result.
-- Should not be used with cacheable methods.
-
 Methods
 ----------
  Using Flashm is very simple as you don't need to get worried when the promises get resolved and syntaxes are very simple. Flashm has four methods.
@@ -101,6 +93,14 @@ flashm.flushBlock( 'getUserFullInformation' );
 ```javascript
 flashm.flushAll();
 ```
+
+Considerations and Limitation
+-------------
+- Don't use when dealing with large data.
+- Don't use to commit/DML to the server. Must be used to retrieve the data from the server.
+- Take care while naming the Block address. Don't use the same name for two different kinds of Apex methods.
+- Should use flushCell in catch statements. So in case of error, Flashm doesn't store the error. In the next call, it tries a server call to retrieve success result.
+- Should not be used with cacheable methods.
 
 Code on  <a href="https://gist.github.com/TheVishnuKumar/176504b9a6d41c671d2d348523a006de">gist</a>
 
