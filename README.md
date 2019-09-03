@@ -1,4 +1,4 @@
-Flashm (Flash Middleware) - Making Almost Server Less Apex Calls
+Flashm (Flash Middleware) - Making Almost Server Less Apex Calls | Storable Actions
 -------------
 
 <div align="center">
@@ -18,6 +18,8 @@ About
 Flashm is a Lightning Web Component framework to reduce Apex server calls and enhance the performance of data fetching for Lightning Web Components. The framework stores the promises at the browser's tab and it can be reused without making the almost no server call.
 
 Flashm works great when we need to retrieve the same data in a low network or no network.
+
+If you are from Aura Component background then you can relate it to Storable Actions from Aura. Although Flashm is not the same as Storable Actions but it serves the quite same output.
 
 Use Case
 -------------
