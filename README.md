@@ -22,10 +22,10 @@ Flashm works great when we need to retrieve the same data in a low network or no
 If you are from Aura Component background then you can relate it to Storable Actions from Aura. Although Flashm is not the same as Storable Actions but it serves the quite same output.
 
 **Note: The same thing can be done just by adding cacheable=true to apex methods. One can use Flashm if need to have control when to refresh data.**<br/>
-
 **What are the differences:**
 1. cacheable=true works quite differently as it will make server call if data has been stale for a few seconds. But Flashm won't make server call in any condition because of cache doesn't refresh automatically.<br/>
 2. cacheable=true gives network error when data has been stale because it tries from server to get data but Flashm will provide the data.
+3. Flashm provides the methods for when to flush data and get new data.
 
 Use Case
 -------------
